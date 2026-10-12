@@ -19,6 +19,7 @@ import {
   WorkspaceProjectOptionListResponse,
   WorkspaceResponse,
   addManagerBody,
+  createWorkspaceBody,
   scimGroupParams,
   searchQuery,
   updateWorkspaceBody,
@@ -27,6 +28,7 @@ import {
 } from './model';
 import {
   addAdmin,
+  createOwnWorkspace,
   deleteWorkspace,
   getWorkspace,
   listManagerCandidates,
@@ -42,10 +44,10 @@ import {
 } from './scim';
 
 // A workspace owns teams. Only its owner and admins manage it; everyone else sees it
-// through the teams they are in. No route creates one: sign-up and sign-in make each
-// person's own (@repo/auth), and an edition that lets a person own more mounts its route
-// on createOwnWorkspace. SCIM provisioning is set up only by the instance owner, in a
-// workspace they own: the identity provider decides who has access to the workspace.
+// through the teams they are in. Sign-up gives each person their own (@repo/auth);
+// POST /workspaces lets them create additional ones when the limit allows. SCIM
+// provisioning is set up only by the instance owner, in a workspace they own: the
+// identity provider decides who has access to the workspace.
 export const workspaceRoutes = new Elysia({ name: 'workspaces', detail: { tags: ['Workspaces'] } })
   .use(authContext)
   .use(guards)
@@ -57,6 +59,24 @@ export const workspaceRoutes = new Elysia({ name: 'workspaces', detail: { tags: 
       description: 'The workspaces you manage or hold a team in, with your standing in each.',
     },
   })
+
+  .post(
+    '/workspaces',
+    async ({ user, body, set }) => {
+      const current = requireUser(user);
+      const id = await createOwnWorkspace(current, body.name.trim());
+      set.status = 201;
+      return getWorkspace(id, 'owner');
+    },
+    {
+      body: createWorkspaceBody,
+      response: { 201: WorkspaceResponse, ...errors(400, 401, 403, 409) },
+      detail: {
+        summary: 'Create a workspace',
+        description: 'Create a new workspace you own.',
+      },
+    },
+  )
 
   .get(
     '/workspaces/:workspaceId',

@@ -9,7 +9,7 @@ import { useProjectsQuery } from '@/services/projects.service';
 import { useTeamsQuery } from '@/services/teams.service';
 import { useWorkspacesQuery } from '@/services/workspaces.service';
 import { useAccountPreferencesQuery } from '@/services/preferences.service';
-import { startPagePath, projectPath } from '@/utils/paths';
+import { startPagePath, projectPath, teamPath } from '@/utils/paths';
 import NewProjectModal from '@/components/layout/NewProjectModal';
 import NewTeamModal from '@/features/teams/components/NewTeamModal';
 import ProjectSwitcherHiddenState from '@/components/layout/ProjectSwitcherHiddenState';
@@ -64,7 +64,14 @@ export default function Home() {
         onAction={() => setCreating(true)}
       >
         {creating && teamWorkspace && (
-          <NewTeamModal workspaceId={teamWorkspace.id} onClose={() => setCreating(false)} />
+          <NewTeamModal
+            workspaceId={teamWorkspace.id}
+            onClose={() => setCreating(false)}
+            onCreated={(team) => {
+              setCreating(false);
+              router.push(teamPath(team.ref));
+            }}
+          />
         )}
       </StartEmpty>
     );

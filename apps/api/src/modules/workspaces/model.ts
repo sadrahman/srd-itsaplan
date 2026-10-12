@@ -20,6 +20,10 @@ export const updateWorkspaceBody = t.Object({
   ),
 });
 
+export const createWorkspaceBody = t.Object({
+  name: t.String({ minLength: 1, maxLength: 60 }),
+});
+
 export const addManagerBody = t.Object({ userId: t.String() });
 
 export const searchQuery = t.Object({

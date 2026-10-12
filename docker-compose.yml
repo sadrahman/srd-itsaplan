@@ -148,7 +148,7 @@ services:
       retries: 5
       start_period: 30s
     ports:
-      - '${API_PORT:-3000}:3000'
+      - '${API_PORT:-8000}:3000'
 
   # Webhook delivery, notification delivery, agent schedules, and agent runs.
   # Shares the database with the api. No public ports.
@@ -239,7 +239,7 @@ services:
       retries: 5
       start_period: 20s
     ports:
-      - '${WEB_PORT:-3001}:3001'
+      - '${WEB_PORT:-8001}:3001'
 
 volumes:
   postgres-data:

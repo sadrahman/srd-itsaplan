@@ -58,9 +58,10 @@ export function suggestKey(name: string): string {
     .replace(/[^A-Z0-9\s]/g, ' ')
     .split(/\s+/)
     .filter(Boolean);
-  if (words.length === 0) return '';
+  if (words.length === 0) return 'PROJ';
   const raw = words.length === 1 ? words[0].slice(0, 4) : words.map((w) => w[0]).join('');
-  return raw.replace(/^\d+/, '').slice(0, KEY_MAX_LENGTH);
+  const key = raw.replace(/^\d+/, '').slice(0, KEY_MAX_LENGTH);
+  return key || 'PROJ';
 }
 
 // Normalizes what the user typed into the key field: transliterated, uppercase,

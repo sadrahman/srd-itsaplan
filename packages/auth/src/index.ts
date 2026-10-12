@@ -327,7 +327,6 @@ const settled = new Set<string>();
 // request; cache it with the setting if that ever shows.
 export async function ensurePersonalWorkspace(userId: string): Promise<void> {
   if (settled.has(userId)) return;
-  if (!(await getAuthSettings()).personalWorkspaces) return;
   await db.transaction(async (tx) => {
     // Two sign-ins at once would otherwise both find none.
     const [account] = await tx
@@ -335,7 +334,15 @@ export async function ensurePersonalWorkspace(userId: string): Promise<void> {
       .from(schema.user)
       .where(eq(schema.user.id, userId))
       .for('update');
-    if (!account || account.role === 'god') return;
+    if (!account) return;
+    if (account.role === 'god') {
+      await tx
+        .insert(schema.workspaceManager)
+        .values({ workspaceId: await instanceWorkspaceId(tx), userId, role: 'owner' })
+        .onConflictDoNothing();
+      return;
+    }
+    if (!(await getAuthSettings()).personalWorkspaces) return;
     const [owned] = await tx
       .select({ n: sql`1` })
       .from(schema.workspaceManager)

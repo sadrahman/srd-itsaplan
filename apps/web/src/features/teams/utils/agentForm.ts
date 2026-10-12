@@ -49,11 +49,17 @@ const USERNAME_PATTERN = /^[a-zA-Z0-9._-]+$/;
 // hold becomes a single dash, leading/trailing dashes are dropped, and it is capped
 // at the 64-char server limit (e.g. "Tets External" -> "tets-external").
 export function suggestUsername(name: string): string {
-  return transliterate(name)
+  let username = transliterate(name)
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '')
     .slice(0, 64);
+
+  if (!USERNAME_PATTERN.test(username)) {
+    username = 'agent';
+  }
+
+  return username;
 }
 
 // Whether the form holds a submittable value: a non-empty name and a username

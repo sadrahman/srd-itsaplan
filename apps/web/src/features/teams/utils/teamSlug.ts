@@ -7,10 +7,19 @@ export const TEAM_SLUG_PATTERN = /^[a-z][a-z0-9-]{0,38}[a-z0-9]$/;
 // characters turned into one dash, cut to start with a letter and to 40 characters
 // (e.g. "Команда Ops 2" -> "komanda-ops-2").
 export function suggestTeamSlug(name: string): string {
-  return transliterate(name)
+  let slug = transliterate(name)
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^[^a-z]+/, '')
+    .replace(/^-+/, '')
     .slice(0, 40)
     .replace(/-+$/, '');
+
+  if (!TEAM_SLUG_PATTERN.test(slug)) {
+    slug = slug.replace(/^[0-9-]+/, '').replace(/-+$/, '');
+    if (!TEAM_SLUG_PATTERN.test(slug)) {
+      slug = 'team';
+    }
+  }
+
+  return slug;
 }
