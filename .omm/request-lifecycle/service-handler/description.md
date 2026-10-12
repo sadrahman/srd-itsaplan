@@ -1,0 +1,1 @@
+Domain business logic handling CRUD operations, event triggers, and state changes.

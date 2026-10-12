@@ -1,0 +1,1 @@
+Elysia application instance parsing HTTP routes, headers, body schemas, and CORS.

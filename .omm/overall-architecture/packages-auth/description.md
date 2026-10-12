@@ -1,0 +1,1 @@
+better-auth configuration wrapper managing sessions, credentials, passkeys, and multi-tenant user access.

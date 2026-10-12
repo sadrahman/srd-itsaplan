@@ -1,0 +1,1 @@
+Email dispatching via SMTP or Resend API.

@@ -1,0 +1,1 @@
+High-level system topology of the SadItsAPlan self-hosted issue planning and autonomous AI agent platform.

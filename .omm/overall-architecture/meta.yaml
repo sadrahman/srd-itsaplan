@@ -1,0 +1,25 @@
+created: 2026-10-12T07:17:12.610Z
+updated: 2026-10-12T07:20:54.484Z
+update_count: 9
+last_field: note
+git_commit: 2447d0f1
+git_branch: main
+prev_diagram: "graph LR
+
+  \    web[\"Web Frontend\\napps/web/\"] -->|\"HTTP / Eden Treaty\"|
+  api[\"Elysia API\\napps/api/\"]
+
+  \    api -->|\"Drizzle ORM\"| db[\"PostgreSQL DB\\npackages/db/\"]
+
+  \    worker[\"Background Worker\\napps/worker/\"] -->|\"Drizzle ORM\"| db
+
+  \    bot[\"Telegram Bot\\napps/bot/\"] -->|\"Drizzle ORM\"| db\r\n"
+children:
+  - apps-api
+  - apps-bot
+  - apps-web
+  - apps-worker
+  - packages-agent-tools
+  - packages-auth
+  - packages-db
+  - packages-runner

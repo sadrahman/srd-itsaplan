@@ -1,0 +1,1 @@
+Associates users and AI agent bots with roles (owner, manager, member, agent) sourced via invite or SCIM.

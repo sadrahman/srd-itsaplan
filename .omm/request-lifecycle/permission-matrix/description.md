@@ -1,0 +1,1 @@
+Granular role and capability verification for workspaces, teams, and projects.

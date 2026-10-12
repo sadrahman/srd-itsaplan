@@ -1,0 +1,1 @@
+better-auth plugin verifying session cookies, Bearer tokens, or API keys.

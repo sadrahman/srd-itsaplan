@@ -1,0 +1,1 @@
+Auth package bundling better-auth and user session logic.

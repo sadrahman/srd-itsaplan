@@ -1,0 +1,1 @@
+Bun and Turborepo monorepo with PostgreSQL, Elysia backend, and Next.js SSR frontend designed for self-hosting with Docker Compose.

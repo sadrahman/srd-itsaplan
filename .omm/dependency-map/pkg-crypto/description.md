@@ -1,0 +1,1 @@
+AES-256-GCM encryption helper for database secrets at rest.

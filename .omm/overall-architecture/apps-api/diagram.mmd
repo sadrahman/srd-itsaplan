@@ -1,0 +1,5 @@
+graph LR
+    auth-mount["Auth Mount\napps/api/src/app.ts"] -->|"Session Guard"| modules["Domain Modules\napps/api/src/modules/"]
+    modules -->|"Task Scheduling"| background-tasks["Background Tasks\napps/api/src/background.ts"]
+    modules -->|"AI Runs"| planner-engine["Agent Planner\napps/api/src/planner.ts"]
+    mcp-server["MCP Server API\napps/api/src/mcp/"] -->|"Domain Access"| modules

@@ -1,0 +1,1 @@
+Next.js App Router SSR frontend with shadcn/ui and TanStack Query, rendering project views, issue boards, and AI chat interfaces.

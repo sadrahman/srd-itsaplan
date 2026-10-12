@@ -1,0 +1,1 @@
+External runner executes only tasks for teams where operator has appropriate permissions.

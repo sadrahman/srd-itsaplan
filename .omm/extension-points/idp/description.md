@@ -1,0 +1,1 @@
+Identity provider managing SSO and group provisioning.

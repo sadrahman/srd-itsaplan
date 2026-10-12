@@ -1,0 +1,1 @@
+Mounts better-auth handler at /api/auth/* and guards routes with session/token checks.

@@ -1,0 +1,1 @@
+Allows external AI agents, local machines, enterprise IdPs, and webhook receivers to plug into SadItsAPlan.

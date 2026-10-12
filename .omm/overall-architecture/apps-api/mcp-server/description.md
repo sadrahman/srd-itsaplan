@@ -1,0 +1,1 @@
+Model Context Protocol endpoint allowing AI models and IDEs to query and manipulate board state.

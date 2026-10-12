@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "installedAt": "2026-10-12T06:26:55.857Z",
+  "files": {
+    "E:\\dev\\selfhosted\\saditsaplan\\.claude\\settings.json": {
+      "plugins": ["ruflo-mods@ruflo", "ruflo-swarm@ruflo", "ruflo-console@ruflo"],
+      "marketplace": true,
+      "env": true,
+      "claudeInstalled": []
+    }
+  }
+}

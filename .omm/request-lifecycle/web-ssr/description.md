@@ -1,0 +1,1 @@
+Next.js Node/Bun SSR server fetching initial HTML state securely before hydration.

@@ -1,0 +1,1 @@
+Ensure shared ESLint rule strictly forbids @repo/db imports in apps/web.

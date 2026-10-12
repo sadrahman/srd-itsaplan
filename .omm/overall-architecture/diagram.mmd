@@ -1,0 +1,9 @@
+graph LR
+    apps-web["Next.js Web App\napps/web/"] -->|"HTTP / SSR Fetch"| apps-api["Elysia API Server\napps/api/"]
+    apps-api -->|"Session & Token Auth"| packages-auth["Better-Auth Engine\npackages/auth/"]
+    apps-api -->|"Drizzle Queries"| packages-db["PostgreSQL Client\npackages/db/"]
+    packages-auth -->|"User & Session Tables"| packages-db
+    apps-worker["Background Worker\napps/worker/"] -->|"Poll & Deliver"| packages-db
+    apps-bot["Telegram Bot\napps/bot/"] -->|"Telegram Long Polling"| packages-db
+    apps-api -->|"Execute Tools"| packages-agent-tools["AI Agent Tools\npackages/agent-tools/"]
+    packages-runner["External Agent Runner\npackages/runner/"] -->|"Polls Queue via HTTP"| apps-api

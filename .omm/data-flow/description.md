@@ -1,0 +1,1 @@
+Data hierarchy and state transition flow from multi-tenant workspaces down to projects, issues, AI agents, and worker deliveries.

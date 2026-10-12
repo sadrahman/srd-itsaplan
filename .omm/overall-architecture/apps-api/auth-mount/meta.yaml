@@ -1,0 +1,9 @@
+created: 2026-10-12T07:22:31.014Z
+updated: 2026-10-12T07:22:31.014Z
+update_count: 1
+last_field: description
+kind: nested-class
+title: auth-mount
+children: []
+parentPath:
+  - apps-api

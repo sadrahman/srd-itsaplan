@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-10-12T06:38:02.893Z",
+  "backedUp": true,
+  "backups": [
+    {
+      "backedUp": true,
+      "path": "E:\\dev\\selfhosted\\saditsaplan\\.swarm\\backups\\memory-2026-10-12T06-38-02-885Z.db",
+      "sizeBytes": 172032,
+      "rotatedAway": [],
+      "dbPath": "E:\\dev\\selfhosted\\saditsaplan\\.swarm\\memory.db"
+    },
+    {
+      "backedUp": false,
+      "skipped": "no-db",
+      "dbPath": "E:\\dev\\selfhosted\\saditsaplan\\.swarm\\agentdb-memory.db"
+    }
+  ],
+  "path": "E:\\dev\\selfhosted\\saditsaplan\\.swarm\\backups\\memory-2026-10-12T06-38-02-885Z.db",
+  "sizeBytes": 172032,
+  "rotatedAway": 0
+}

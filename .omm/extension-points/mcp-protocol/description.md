@@ -1,0 +1,1 @@
+Elysia MCP endpoints exposing tools and resources for project planning.

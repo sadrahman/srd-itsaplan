@@ -1,0 +1,9 @@
+graph TD
+    workspace-root["Workspace\npackages/db/src/schema/app.ts"] -->|"Governed by (owner/admin)"| workspace-managers["Workspace Managers\npackages/db/src/schema/app.ts"]
+    workspace-root -->|"Contains 1..N"| team-entity["Team\npackages/db/src/schema/app.ts"]
+    team-entity -->|"Has Members (owner/mgr/mbr/agent)"| team-members["Team Members\npackages/db/src/schema/app.ts"]
+    team-entity -->|"Owns 1..N"| project-entity["Project\npackages/db/src/schema/app.ts"]
+    project-entity -->|"Contains Issues & Cycles"| issue-lifecycle["Issues & Workflow\npackages/db/src/schema/app.ts"]
+    team-entity -->|"Configures Agents & Tools"| agent-execution["AI Agents & Runs\npackages/db/src/schema/app.ts"]
+    agent-execution -->|"Triggers Actions & Tasks"| issue-lifecycle
+    issue-lifecycle -->|"Enqueues Notifications"| worker-dispatch["Worker Dispatch\napps/worker/"]

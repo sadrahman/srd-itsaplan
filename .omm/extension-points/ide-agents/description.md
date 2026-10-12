@@ -1,0 +1,1 @@
+Claude Code, Antigravity IDE, Cursor, and custom agentic frameworks interacting via MCP.

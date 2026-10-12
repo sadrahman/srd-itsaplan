@@ -1,0 +1,1 @@
+Top-level tenant container with name, color tile, and team creation policies (owner, managers, members).

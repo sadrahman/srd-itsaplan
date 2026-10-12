@@ -1,0 +1,1 @@
+Telegram bot runs long polling and must strictly remain at replica count 1.

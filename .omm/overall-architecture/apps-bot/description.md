@@ -1,0 +1,1 @@
+Telegram bot daemon maintaining long-polling connection for issue notifications and command triggers.

@@ -44,3 +44,15 @@ coverage
 
 # agent scratch space (test docs, drafts)
 .workspace/
+
+# Ruflo local secrets and runtime data
+.claude-flow/data/
+.claude-flow/logs/
+.claude-flow/sessions/
+.claude-flow/daemon.pid
+.claude-flow/daemon-state.json
+.claude-flow/graph/
+*.db
+*.db-journal
+.swarm/backups/
+.swarm/memory.db

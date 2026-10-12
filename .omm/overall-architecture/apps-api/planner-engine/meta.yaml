@@ -1,0 +1,9 @@
+created: 2026-10-12T07:22:31.386Z
+updated: 2026-10-12T07:22:31.387Z
+update_count: 1
+last_field: description
+kind: nested-class
+title: planner-engine
+children: []
+parentPath:
+  - apps-api

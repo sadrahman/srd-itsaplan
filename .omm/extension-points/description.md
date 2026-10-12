@@ -1,0 +1,1 @@
+Extension interfaces, integrations, external runners, MCP protocols, and identity synchronization.

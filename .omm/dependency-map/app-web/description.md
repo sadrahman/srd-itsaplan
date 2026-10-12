@@ -1,0 +1,1 @@
+Next.js frontend bundle consuming apps/api over HTTP.

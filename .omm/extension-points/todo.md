@@ -1,0 +1,1 @@
+Support bidirectional GitHub issue sync and PR comment review integration.

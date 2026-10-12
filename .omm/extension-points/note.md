@@ -1,0 +1,1 @@
+MCP can be disabled per-team via mcp_enabled flag in team table.

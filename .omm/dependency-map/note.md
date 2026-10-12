@@ -1,0 +1,1 @@
+packages/crypto provides AES-256-GCM symmetric encryption using APP_ENCRYPTION_KEY.

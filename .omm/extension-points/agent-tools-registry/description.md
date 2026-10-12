@@ -1,0 +1,1 @@
+Collection of executable tools for agents (Gitea, Telegram, Firecrawl, Jina, etc.).

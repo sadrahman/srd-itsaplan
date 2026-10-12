@@ -1,0 +1,14 @@
+graph TD
+    app-web["apps/web\napps/web/"] -->|"HTTP Only"| app-api["apps/api\napps/api/"]
+    app-api --> pkg-auth["@repo/auth\npackages/auth/"]
+    app-api --> pkg-db["@repo/db\npackages/db/"]
+    app-api --> pkg-crypto["@repo/crypto\npackages/crypto/"]
+    app-api --> pkg-mailer["@repo/mailer\npackages/mailer/"]
+    app-api --> pkg-net["@repo/net\npackages/net/"]
+    app-api --> pkg-agent-tools["@repo/agent-tools\npackages/agent-tools/"]
+    pkg-auth --> pkg-db
+    pkg-auth --> pkg-crypto
+    app-worker["apps/worker\napps/worker/"] --> pkg-db
+    app-worker --> pkg-mailer
+    app-bot["apps/bot\napps/bot/"] --> pkg-db
+    pkg-runner["@itsaplan/runner\npackages/runner/"] -->|"HTTP API Client"| app-api

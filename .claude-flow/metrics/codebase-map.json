@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-10-12T08:13:02.993Z",
+  "projectRoot": "E:\\dev\\selfhosted\\saditsaplan",
+  "structure": {
+    "hasPackageJson": true,
+    "hasTsConfig": true,
+    "hasClaudeConfig": true,
+    "hasClaudeFlow": true
+  },
+  "scannedAt": 1791792782993
+}

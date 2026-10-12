@@ -1,0 +1,1 @@
+Standalone Node.js CLI daemon polling agent work queues and executing tasks on user-controlled hardware.

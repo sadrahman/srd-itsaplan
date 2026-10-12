@@ -1,0 +1,1 @@
+Frontend must never import packages directly; communication is strictly over HTTP. Runtime is Bun except packages/runner.

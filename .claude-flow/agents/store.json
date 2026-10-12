@@ -1,0 +1,20 @@
+{
+  "agents": {
+    "agent-1791786841635-wxh01a": {
+      "agentId": "agent-1791786841635-wxh01a",
+      "agentType": "coder",
+      "status": "idle",
+      "health": 1,
+      "taskCount": 0,
+      "config": {
+        "provider": "anthropic",
+        "timeout": 300,
+        "autoTools": true
+      },
+      "createdAt": "2026-10-12T06:34:01.635Z",
+      "model": "sonnet",
+      "modelRoutedBy": "default"
+    }
+  },
+  "version": "3.0.0"
+}

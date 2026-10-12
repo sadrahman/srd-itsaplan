@@ -1,0 +1,1 @@
+Elysia web service running on Bun. Hosts REST API, better-auth handlers, SSE chat streams, and MCP server endpoints.

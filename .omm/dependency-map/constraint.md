@@ -1,0 +1,1 @@
+apps/web must NEVER import packages directly; must interact solely over HTTP with apps/api.

@@ -1,0 +1,1 @@
+Every project must belong to exactly one team; an AI agent in a team receives an agent bot user in team_member.

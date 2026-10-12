@@ -1,0 +1,1 @@
+SSRF protection wrapper for arbitrary outgoing HTTP requests.

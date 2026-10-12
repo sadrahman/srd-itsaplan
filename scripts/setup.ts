@@ -103,7 +103,11 @@ const requireDocker = async () => {
   process.exit(1);
 };
 
-const openBrowser = (url: string) => exec(process.platform === 'darwin' ? 'open' : 'xdg-open', url);
+const openBrowser = (url: string) => {
+  if (process.platform === 'darwin') return exec('open', url);
+  if (process.platform === 'win32') return exec('cmd', '/c', 'start', '', url);
+  return exec('xdg-open', url);
+};
 
 const secrets = ['BETTER_AUTH_SECRET', 'APP_ENCRYPTION_KEY'];
 

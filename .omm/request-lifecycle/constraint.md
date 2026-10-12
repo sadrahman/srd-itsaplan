@@ -1,0 +1,1 @@
+All workspace and team access must pass through role verification checks before touching entities.

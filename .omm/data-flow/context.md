@@ -1,0 +1,1 @@
+Workspaces provide top-level segregation; Teams own projects; Projects own issue sequences (e.g. MKT-42) and workflow columns.

@@ -1,0 +1,8 @@
+graph LR
+    client-browser["Browser / Client\nClient Side"] -->|"HTTPS Request"| web-ssr["Next.js SSR\napps/web/"]
+    client-browser -->|"Client-side Fetch / SSE"| api-gateway["Elysia Server\napps/api/"]
+    web-ssr -->|"SSR Data Fetch"| api-gateway
+    api-gateway -->|"Extract Cookie / Bearer"| auth-guard["better-auth Guard\npackages/auth/"]
+    auth-guard -->|"Resolve User & Roles"| permission-matrix["Permission Matrix\npackages/db/"]
+    permission-matrix -->|"Authorize Request"| service-handler["Module Service\napps/api/src/modules/"]
+    service-handler -->|"Drizzle Query / Mutation"| postgres-db["PostgreSQL\npackages/db/"]

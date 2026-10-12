@@ -1,0 +1,1 @@
+Web app acts as SSR and client consumer, communicating with Elysia API over HTTP; never directly touching the database.

@@ -1,0 +1,1 @@
+Core backend application aggregating auth, db, crypto, mailer, net, and agent-tools.

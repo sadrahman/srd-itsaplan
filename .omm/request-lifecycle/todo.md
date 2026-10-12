@@ -1,0 +1,1 @@
+Add telemetry tracing headers across SSR fetch and Elysia route handlers.

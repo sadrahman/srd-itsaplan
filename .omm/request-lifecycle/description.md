@@ -1,0 +1,1 @@
+End-to-end journey of an HTTP/SSE request from client to database through authentication and authorization layers.

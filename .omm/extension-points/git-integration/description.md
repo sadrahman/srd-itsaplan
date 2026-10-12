@@ -1,0 +1,1 @@
+Git provider connection manager handling OAuth and webhooks.

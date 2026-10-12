@@ -7,4 +7,9 @@ import { config } from '@repo/eslint-config/base';
  *
  * @type {import("eslint").Linter.Config[]}
  */
-export default config;
+export default [
+  ...config,
+  {
+    ignores: ['.claude/**', '.claude-flow/**', '.swarm/**', '.omm/**', '.agents/**'],
+  },
+];

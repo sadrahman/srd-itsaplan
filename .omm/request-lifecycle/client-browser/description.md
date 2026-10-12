@@ -1,0 +1,1 @@
+End-user web browser or desktop client executing React UI, sending requests and receiving SSE streams.

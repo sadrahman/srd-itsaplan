@@ -1,0 +1,1 @@
+better-auth sessions are validated on Elysia via cookie or authorization header.

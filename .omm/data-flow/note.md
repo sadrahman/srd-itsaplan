@@ -1,0 +1,1 @@
+Workspace membership is derived from team_member; only managers/owners exist in workspace_manager.

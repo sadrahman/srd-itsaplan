@@ -1,0 +1,18 @@
+created: 2026-10-12T07:27:55.665Z
+updated: 2026-10-12T07:28:05.872Z
+update_count: 7
+last_field: note
+git_commit: 2447d0f1
+git_branch: main
+children:
+  - agent-tools-registry
+  - external-apps
+  - external-runner
+  - git-integration
+  - git-remotes
+  - ide-agents
+  - idp
+  - mcp-protocol
+  - operator-host
+  - scim-directory
+  - webhook-subsystem

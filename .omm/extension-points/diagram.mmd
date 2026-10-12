@@ -1,0 +1,8 @@
+graph LR
+    ide-agents["IDEs & External LLMs\nMCP Clients"] -->|"JSON-RPC / SSE"| mcp-protocol["MCP Server\napps/api/src/mcp/"]
+    mcp-protocol -->|"Invokes Tools"| agent-tools-registry["Tool Registry\npackages/agent-tools/"]
+    operator-host["Operator Machine\nLocal Environment"] -->|"Pulls Task Queue"| external-runner["Runner CLI\npackages/runner/"]
+    external-runner -->|"Executes Script & Reports"| agent-tools-registry
+    external-apps["External Services\nSlack / CI / Zapier"] <--|"HTTP POST Payloads"| webhook-subsystem["Webhooks\napps/api/src/modules/webhooks/"]
+    idp["Enterprise IdP\nOkta / Azure AD"] -->|"User & Group Sync"| scim-directory["SCIM 2.0\napps/api/src/modules/scim/"]
+    git-remotes["GitHub / GitLab / Gitea\nVersion Control"] <-->|"Webhooks & Status Checks"| git-integration["Git Integration\napps/api/src/modules/git/"]

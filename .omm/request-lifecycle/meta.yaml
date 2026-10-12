@@ -1,0 +1,14 @@
+created: 2026-10-12T07:24:19.916Z
+updated: 2026-10-12T07:24:56.148Z
+update_count: 7
+last_field: note
+git_commit: 2447d0f1
+git_branch: main
+children:
+  - api-gateway
+  - auth-guard
+  - client-browser
+  - permission-matrix
+  - postgres-db
+  - service-handler
+  - web-ssr

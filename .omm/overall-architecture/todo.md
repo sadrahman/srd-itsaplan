@@ -1,0 +1,1 @@
+Add Ruflo adaptive swarm hooks and ReasoningBank pattern storage into agent-tools runtime.
